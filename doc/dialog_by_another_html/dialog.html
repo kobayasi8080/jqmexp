@@ -9,13 +9,15 @@
       <script>
         $('div#d1')
           .on('pagebeforecreate', function(e){ console.log('pagebeforecreate', e); })
-        ;
+          ;
         $('div#d1') // 効かない。Body なら効くが、このダイアログじゃなくて繊維元含めた全体に効く
           .on('pagecontainerbeforechange', function(e, ui){ console.log('pagecontainerbeforechange', e, ui); })
           .on('pagecontainerbeforeshow', function(e, ui){ console.log('pagecontainerbeforeshow', e, ui); })
           .on('pagecontainerbeforehide', function(e, ui){ console.log('pagecontainerbeforehide', e, ui); })
           ;
-      </script>
+        $('div#d1')
+          .on('dialogcreate', function(e, ui){ console.log('dialogcreate', e, ui); })
+          ;
     	<div data-role="header">
         <a href="javascript:history.back()">back</a>
         <h1>Dialog By HTML</h1>
