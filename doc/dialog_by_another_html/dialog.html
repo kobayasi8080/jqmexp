@@ -6,17 +6,37 @@
   </head>
   <body>
     <div data-role="page">
+      <script>
+        $('div[data-role=page]')
+          .on('pagebeforecreate', function(e){ console.log('pagebeforecreate', e); })
+          .on('pagecontainerbeforechange', function(e, ui){ console.log('pagecontainerbeforechange', e, ui); })
+          .on('pagecontainerbeforeshow', function(e, ui){ console.log('pagecontainerbeforeshow', e, ui); })
+          .on('pagecontainerbeforehide', function(e, ui){ console.log('pagecontainerbeforehide', e, ui); })
+          ;
+      </script>
     	<div data-role="header">
-          <a href="javascript:history.back()">back</a>
-          <h1>Dialog By HTML</h1>
+        <a href="javascript:history.back()">back</a>
+        <h1>Dialog By HTML</h1>
       </div>
     	<div role="main" class="ui-content">
-
         <p>
           Dialog page
-          <a data-role="button" href="dialog.html" data-rel="dialog">Open Dialog</a>
         </p>
-        
+        <p>
+          API
+          <ul>
+            <li>https://api.jquerymobile.com/1.4/page/</li>
+            <li>https://api.jquerymobile.com/1.4/pagecontainer/</li>
+          </ul>
+          <pre>
+        $('div[data-role=page]')
+          .on('pagebeforecreate', function(e){ console.log('pagebeforecreate', e); })
+          .on('pagecontainerbeforechange', function(e, ui){ console.log('pagecontainerbeforechange', e, ui); })
+          .on('pagecontainerbeforeshow', function(e, ui){ console.log('pagecontainerbeforeshow', e, ui); })
+          .on('pagecontainerbeforehide', function(e, ui){ console.log('pagecontainerbeforehide', e, ui); })
+          ;
+          </pre>
+        </p>
       </div>
     	<div data-role="footer">
         <h1>...</h1>
