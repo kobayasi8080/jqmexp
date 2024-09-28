@@ -5,12 +5,12 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   </head>
   <body>
-    <div data-role="page">
+    <div data-role="page" id="d1">
       <script>
-        $('div[data-role=page]')
+        $('div#d1')
           .on('pagebeforecreate', function(e){ console.log('pagebeforecreate', e); })
         ;
-        $('body')
+        $('div#d1')
           .on('pagecontainerbeforechange', function(e, ui){ console.log('pagecontainerbeforechange', e, ui); })
           .on('pagecontainerbeforeshow', function(e, ui){ console.log('pagecontainerbeforeshow', e, ui); })
           .on('pagecontainerbeforehide', function(e, ui){ console.log('pagecontainerbeforehide', e, ui); })
