@@ -10,7 +10,7 @@
         $('div#d1')
           .on('pagebeforecreate', function(e){ console.log('pagebeforecreate', e); })
         ;
-        $('div#d1') // Body なら効くが、このダイアログじゃなくて繊維元含めた全体に効く
+        $('div#d1') // 効かない。Body なら効くが、このダイアログじゃなくて繊維元含めた全体に効く
           .on('pagecontainerbeforechange', function(e, ui){ console.log('pagecontainerbeforechange', e, ui); })
           .on('pagecontainerbeforeshow', function(e, ui){ console.log('pagecontainerbeforeshow', e, ui); })
           .on('pagecontainerbeforehide', function(e, ui){ console.log('pagecontainerbeforehide', e, ui); })
@@ -34,7 +34,7 @@
         $('div#d1')
           .on('pagebeforecreate', function(e){ console.log('pagebeforecreate', e); })
         ;
-        $('div#d1') // Body なら効くが、このダイアログじゃなくて繊維元含めた全体に効く
+        $('div#d1') // 効かない。Body なら効くが、このダイアログじゃなくて繊維元含めた全体に効く
           .on('pagecontainerbeforechange', function(e, ui){ console.log('pagecontainerbeforechange', e, ui); })
           .on('pagecontainerbeforeshow', function(e, ui){ console.log('pagecontainerbeforeshow', e, ui); })
           .on('pagecontainerbeforehide', function(e, ui){ console.log('pagecontainerbeforehide', e, ui); })
