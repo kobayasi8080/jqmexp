@@ -9,6 +9,8 @@
       <script>
         $('div[data-role=page]')
           .on('pagebeforecreate', function(e){ console.log('pagebeforecreate', e); })
+        ;
+        $('body')
           .on('pagecontainerbeforechange', function(e, ui){ console.log('pagecontainerbeforechange', e, ui); })
           .on('pagecontainerbeforeshow', function(e, ui){ console.log('pagecontainerbeforeshow', e, ui); })
           .on('pagecontainerbeforehide', function(e, ui){ console.log('pagecontainerbeforehide', e, ui); })
