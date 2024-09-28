@@ -42,6 +42,9 @@
           .on('pagecontainerbeforeshow', function(e, ui){ console.log('pagecontainerbeforeshow', e, ui); })
           .on('pagecontainerbeforehide', function(e, ui){ console.log('pagecontainerbeforehide', e, ui); })
           ;
+        $('div#d1')
+          .on('dialogcreate', function(e, ui){ console.log('dialogcreate', e, ui); })
+          ;
           </pre>
         </p>
       </div>
